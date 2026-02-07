@@ -9,13 +9,19 @@ const parser = new Parser();
 let todayArticle = null;
 
 async function fetchArticle() {
-    const feed = await parser.parseURL(
-        'https://www.theartstory.org/rss.xml'
-    );
+    try {
+        const feed = await parser.parseURL(
+            'https://www.theartstory.org/rss.xml'
+        );
 
-    todayArticle = feed.items[0];
+        todayArticle = feed.items[0];
 
-    fs.writeFileSync('article.json', JSON.stringify(todayArticle));
+        fs.writeFileSync('article.json', JSON.stringify(todayArticle));
+
+        console.log('Article updated:', todayArticle.title);
+    } catch (e) {
+        console.error('RSS fetch error', e);
+    }
 }
 
 // каждый день в 9:00
@@ -36,5 +42,9 @@ app.get('/', (req, res) => {
     `);
 });
 
-app.listen(3000, () => console.log('Server running'));
+const PORT = process.env.PORT || 3000;
 
+app.listen(PORT, () => {
+    console.log('Server running on', PORT);
+    fetchArticle(); // первый запуск сразу
+});
