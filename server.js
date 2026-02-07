@@ -5,30 +5,30 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 
 const app = express();
 
-// Gemini для AI summary (можно использовать, если нужно)
+// Gemini for AI summary (optional)
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
 
 let todayArticle = null;
 
-// === Загружаем статью из файла ===
+// === Load article from JSON file ===
 function loadArticle() {
     if (fs.existsSync('articles.json')) {
         try {
             const articles = JSON.parse(fs.readFileSync('articles.json'));
-            todayArticle = articles[0]; // берем первую статью
+            todayArticle = articles[0]; // first article
         } catch (e) {
             console.error('Error reading articles.json', e);
         }
     }
 }
 
-// === Homepage с полной статьёй и картинкой ===
+// === Homepage: full article with image ===
 app.get('/', (req, res) => {
     if (!todayArticle) loadArticle();
-    if (!todayArticle) return res.send("Статья дня пока не загружена");
+    if (!todayArticle) return res.send("Article of the Day is not available yet.");
 
-    // картинка
+    // image tag
     let imgTag = '';
     if (todayArticle.enclosure?.url || todayArticle.image?.url) {
         const imgUrl = todayArticle.enclosure?.url || todayArticle.image?.url;
@@ -37,10 +37,10 @@ app.get('/', (req, res) => {
 
     res.send(`
         <!DOCTYPE html>
-        <html lang="ru">
+        <html lang="en">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Статья дня</title>
+            <title>Article of the Day</title>
             <style>
                 body {
                     display: flex;
@@ -87,7 +87,7 @@ app.get('/', (req, res) => {
                 ${imgTag}
                 <p>${todayArticle.content || todayArticle.contentSnippet || ''}</p>
                 ${todayArticle.summary ? `<p><strong>Summary:</strong> ${todayArticle.summary}</p>` : ''}
-                <a href="${todayArticle.link}" target="_blank">Читать оригинал</a>
+                <a href="${todayArticle.link}" target="_blank">Read original article</a>
             </div>
         </body>
         </html>
@@ -113,10 +113,10 @@ app.get('/archive', (req, res) => {
 
     res.send(`
         <!DOCTYPE html>
-        <html lang="ru">
+        <html lang="en">
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Архив статей</title>
+            <title>Article Archive</title>
             <style>
                 body { font-family: Arial, sans-serif; padding: 20px; }
                 ul { padding-left: 20px; }
@@ -126,7 +126,7 @@ app.get('/archive', (req, res) => {
             </style>
         </head>
         <body>
-            <h1>Архив статей</h1>
+            <h1>Article Archive</h1>
             <ul>${list}</ul>
         </body>
         </html>
@@ -137,5 +137,5 @@ app.get('/archive', (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log('Server running on', PORT);
-    loadArticle(); // загрузка статьи при старте
+    loadArticle(); // load article at start
 });
