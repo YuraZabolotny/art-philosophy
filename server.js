@@ -9,23 +9,24 @@ const app = express();
 
 const categoriesListAllXml = `<?xml version="1.0"?>
 <response>
+  <type>prismic</type>
   <results_size>373</results_size>
   <results>
     <item>
       <id>1</id>
       <title>Root Catalog</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1768812103000</last_update>
       <blob>
-        <url_key></url_key>
+        <url_key/>
       </blob>
     </item>
     <item>
       <id>2</id>
       <title>Default Category</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1768812103000</last_update>
       <blob>
         <url_key>default-category</url_key>
@@ -34,8 +35,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>3</id>
       <title>Paint</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1733759243000</last_update>
       <blob>
         <url_key>paint</url_key>
@@ -44,8 +45,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>4</id>
       <title>Shop By Colour</title>
-      <description>&lt;p&gt;&amp;lt;p&amp;gt;&amp;lt;span&amp;gt;The Little Greene paint collections bring together the most useful and beautiful luxury paint colours from all the key periods in the history of decoration. &amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;p&amp;gt;Browse the colour families below and order &amp;lt;a href="https://www.littlegreene.com/samples-55/paint"&amp;gt;60ml sample pots&amp;lt;/a&amp;gt; of our Absolute Matt Emulsion paint colours to test in your home. Testing our luxury paint colours in your home is the perfect way to choose paint colours that go together with the light and feel of your space.&amp;lt;/p&amp;gt;&lt;br /&gt;&amp;lt;p&amp;gt;If you have a colour card in your hand you might find it easier to &amp;lt;span style="color: #008000;"&amp;gt;&amp;lt;span style="color: #008000;"&amp;gt;&amp;lt;a href="https://www.littlegreene.com/paint/collection"&amp;gt;shop by collection&amp;lt;/a&amp;gt;. &amp;lt;/span&amp;gt;&amp;lt;/span&amp;gt;Or, for more detailed information on the different types of paint, try &amp;lt;span style="color: #008000;"&amp;gt;&amp;lt;a href="https://www.littlegreene.com/paint/finish"&amp;gt;&amp;lt;span style="color: #008000;"&amp;gt;shopping by finish&amp;lt;/span&amp;gt;&amp;lt;/a&amp;gt;&amp;lt;/span&amp;gt;.&amp;lt;/p&amp;gt;&lt;/p&gt;</description>
-      <image_url></image_url>
+      <description><![CDATA[<p>The Little Greene paint collections bring together the most useful and beautiful luxury paint colours from all the key periods in the history of decoration.</p><p>Browse the colour families below and order <a href="https://www.littlegreene.com/samples-55/paint">60ml sample pots</a> of our Absolute Matt Emulsion paint colours to test in your home. Testing our luxury paint colours in your home is the perfect way to choose paint colours that go together with the light and feel of your space.</p><p>If you have a colour card in your hand you might find it easier to <a href="https://www.littlegreene.com/paint/collection">shop by collection</a>. Or, for more detailed information on the different types of paint, try <a href="https://www.littlegreene.com/paint/finish">shopping by finish</a>.</p>]]></description>
+      <image_url/>
       <last_update>1728308884000</last_update>
       <blob>
         <url_key>colour</url_key>
@@ -54,7 +55,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>5</id>
       <title>Neutral</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Neutral.jpg</image_url>
       <last_update>1714486194000</last_update>
       <blob>
@@ -64,7 +65,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>6</id>
       <title>White</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/White.jpg</image_url>
       <last_update>1714486237000</last_update>
       <blob>
@@ -74,7 +75,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>7</id>
       <title>Green</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Green.jpg</image_url>
       <last_update>1714486256000</last_update>
       <blob>
@@ -84,7 +85,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>8</id>
       <title>Blue</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/_0005_Etruria.jpg</image_url>
       <last_update>1714578040000</last_update>
       <blob>
@@ -94,7 +95,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>9</id>
       <title>Red &amp; Pink</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Pink.jpg</image_url>
       <last_update>1714486277000</last_update>
       <blob>
@@ -104,7 +105,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>10</id>
       <title>Yellow</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Yellow.jpg</image_url>
       <last_update>1714486302000</last_update>
       <blob>
@@ -114,7 +115,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>11</id>
       <title>Black</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByColour_Black_1.jpg</image_url>
       <last_update>1692190213000</last_update>
       <blob>
@@ -124,7 +125,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>12</id>
       <title>Grey</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Grey.jpg</image_url>
       <last_update>1767886032000</last_update>
       <blob>
@@ -134,7 +135,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>13</id>
       <title>Archive</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Archive.jpg</image_url>
       <last_update>1728308884000</last_update>
       <blob>
@@ -144,8 +145,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>14</id>
       <title>Paint Collections</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1701770851000</last_update>
       <blob>
         <url_key>collections</url_key>
@@ -154,7 +155,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>15</id>
       <title>Colours of England</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByCollection_CofE.jpg</image_url>
       <last_update>1774878779000</last_update>
       <blob>
@@ -164,7 +165,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>16</id>
       <title>Stone</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByCollection_Stone.jpg</image_url>
       <last_update>1774878836000</last_update>
       <blob>
@@ -174,7 +175,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>17</id>
       <title>Grey</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByCollection_Grey_1.jpg</image_url>
       <last_update>1692191980000</last_update>
       <blob>
@@ -184,7 +185,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>18</id>
       <title>Colour Scales</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByCollection_ColScales.jpg</image_url>
       <last_update>1759763215000</last_update>
       <blob>
@@ -194,7 +195,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>19</id>
       <title>Green</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByCollection_Green.jpg</image_url>
       <last_update>1652179272000</last_update>
       <blob>
@@ -204,8 +205,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>20</id>
       <title>Paint Period</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1717072895000</last_update>
       <blob>
         <url_key>period</url_key>
@@ -214,7 +215,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>21</id>
       <title>Georgian Paint Colours</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByPeriod_Georgian.jpg</image_url>
       <last_update>1692192254000</last_update>
       <blob>
@@ -224,7 +225,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>22</id>
       <title>Regency Paint Colours</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByPeriod_Regency.jpg</image_url>
       <last_update>1692192334000</last_update>
       <blob>
@@ -234,7 +235,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>23</id>
       <title>Victorian Paint Colours</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByPeriod_Victorian.jpg</image_url>
       <last_update>1692192383000</last_update>
       <blob>
@@ -244,7 +245,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>24</id>
       <title>1930s Paint Colours</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByPeriod_1930s.jpg</image_url>
       <last_update>1692192445000</last_update>
       <blob>
@@ -254,7 +255,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>25</id>
       <title>1950s Paint Colours</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByPeriod_1950s.jpg</image_url>
       <last_update>1692192471000</last_update>
       <blob>
@@ -264,7 +265,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>26</id>
       <title>1960s Paint Colours</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByPeriod_1960s.jpg</image_url>
       <last_update>1692192516000</last_update>
       <blob>
@@ -274,7 +275,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>27</id>
       <title>1970s Paint Colours</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/CatGrd_Paint_ByPeriod_1970s.jpg</image_url>
       <last_update>1692192555000</last_update>
       <blob>
@@ -284,8 +285,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>28</id>
       <title>Paint Finishes</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1692192864000</last_update>
       <blob>
         <url_key>finishes</url_key>
@@ -294,8 +295,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>29</id>
       <title>Interior Paint Finishes</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1692955339000</last_update>
       <blob>
         <url_key>interior-paint-finishes</url_key>
@@ -304,8 +305,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>30</id>
       <title>Exterior Paint Finishes</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1743428788000</last_update>
       <blob>
         <url_key>exterior-paint-finishes</url_key>
@@ -314,8 +315,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>31</id>
       <title>Primers &amp; Undercoats</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1646740105000</last_update>
       <blob>
         <url_key>primers-undercoats</url_key>
@@ -324,8 +325,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>32</id>
       <title>Paint Sample Pots</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1694008345000</last_update>
       <blob>
         <url_key>sample-pots</url_key>
@@ -334,8 +335,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>33</id>
       <title>Wallpaper</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1768812103000</last_update>
       <blob>
         <url_key>wallpaper</url_key>
@@ -344,8 +345,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>34</id>
       <title>Wallpaper by Colour</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1692194076000</last_update>
       <blob>
         <url_key>colour</url_key>
@@ -354,7 +355,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>35</id>
       <title>Neutral</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Neutral_1.jpg</image_url>
       <last_update>1726567067000</last_update>
       <blob>
@@ -364,7 +365,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>36</id>
       <title>Grey</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Grey_1.jpg</image_url>
       <last_update>1767886015000</last_update>
       <blob>
@@ -374,7 +375,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>37</id>
       <title>Red</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/tulip_red.jpg</image_url>
       <last_update>1729591825000</last_update>
       <blob>
@@ -384,7 +385,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>38</id>
       <title>Yellow</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Yellow_1.jpg</image_url>
       <last_update>1726569456000</last_update>
       <blob>
@@ -394,7 +395,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>39</id>
       <title>Green</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Green_1.jpg</image_url>
       <last_update>1726569483000</last_update>
       <blob>
@@ -404,7 +405,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>40</id>
       <title>Blue</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Blue.jpg</image_url>
       <last_update>1726569500000</last_update>
       <blob>
@@ -414,7 +415,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>41</id>
       <title>Pink</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Pink_1.jpg</image_url>
       <last_update>1726569529000</last_update>
       <blob>
@@ -424,7 +425,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>42</id>
       <title>Black</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Black-325x481px.jpg</image_url>
       <last_update>1693408397000</last_update>
       <blob>
@@ -434,8 +435,8 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>43</id>
       <title>Wallpapers by Style</title>
-      <description></description>
-      <image_url></image_url>
+      <description/>
+      <image_url/>
       <last_update>1692194623000</last_update>
       <blob>
         <url_key>style</url_key>
@@ -444,7 +445,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>44</id>
       <title>Floral Wallpapers</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Floral.jpg</image_url>
       <last_update>1726569568000</last_update>
       <blob>
@@ -454,7 +455,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>45</id>
       <title>Metallic Wallpapers</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Metallic.jpg</image_url>
       <last_update>1734082465000</last_update>
       <blob>
@@ -464,7 +465,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>46</id>
       <title>Classical Wallpapers</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Classical.jpg</image_url>
       <last_update>1726569612000</last_update>
       <blob>
@@ -474,7 +475,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>47</id>
       <title>Damask Wallpapers</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Damask.jpg</image_url>
       <last_update>1726569636000</last_update>
       <blob>
@@ -484,7 +485,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>48</id>
       <title>Geometric Wallpapers</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Geometric.jpg</image_url>
       <last_update>1726569654000</last_update>
       <blob>
@@ -494,7 +495,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>49</id>
       <title>Striped Wallpapers</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Striped.jpg</image_url>
       <last_update>1726580981000</last_update>
       <blob>
@@ -504,7 +505,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
     <item>
       <id>50</id>
       <title>Small Print Wallpapers</title>
-      <description></description>
+      <description/>
       <image_url>/media/catalog/category/Small_Print.jpg</image_url>
       <last_update>1726569680000</last_update>
       <blob>
@@ -512,8 +513,7 @@ const categoriesListAllXml = `<?xml version="1.0"?>
       </blob>
     </item>
   </results>
-</response>
-`;
+</response>`;
 
 // CONFIGURATION: Try these model names if one doesn't work:
 // - "gemini-2.5-flash" (newest, recommended)
